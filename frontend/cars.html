@@ -1,0 +1,69 @@
+<!-- CARS SECTION -->
+<section id="cars" class="container">
+  <h2 class="text-center mb-4">UNIQUE CARS FOR <span class="highlight">RENTAL</span></h2>
+  <div class="row" id="carCardsContainer">
+    <!-- Placeholder: Aute ćemo ovdje dodavati kasnije -->
+  </div>
+</section>
+
+<!-- RENT MODAL (može ostati neaktivan do daljnjeg) -->
+<div class="modal fade" id="rentSpecialModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Rent Special Car</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">
+      <p><strong>Car:</strong> <span id="specialModalCarName"></span></p>
+      <p><strong>Price/Day:</strong> $<span id="specialModalPricePerDay"></span></p>
+
+      <label>From:</label>
+      <input type="date" id="specialRentDateFrom" class="form-control mb-2">
+      <label>To:</label>
+      <input type="date" id="specialRentDateTo" class="form-control mb-2">
+      <label>Card Number:</label>
+      <input type="text" id="specialCardNumber" class="form-control mb-2" placeholder="XXXX XXXX XXXX XXXX" />
+
+      <label>Expiry Date (MM/YY):</label>
+      <input type="text" id="specialExpiryDate" class="form-control mb-2" placeholder="MM/YY" />
+
+      <label>CVC:</label>
+      <input type="text" id="specialCvc" class="form-control mb-2" placeholder="XXX" />
+
+
+      <p><strong>Total:</strong> $<span id="specialModalTotalPrice">0</span></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      <button class="btn btn-success" id="confirmSpecialReservationBtn">Confirm Reservation</button>
+    </div>
+  </div></div>
+</div>
+
+
+<!-- SERVICES SECTION -->
+<section class="services-section mt-5">
+  <div class="container">
+    <h2 class="text-center mb-24">OUR <span class="highlight">SERVICES</span></h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-box">
+          <h4>24/7 Support</h4>
+          <p>We offer round-the-clock customer service for a seamless experience.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <h4>Luxury Cars</h4>
+          <p>Rent high-end vehicles that match your style and comfort.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <h4>Easy Booking</h4>
+          <p>Simple and quick booking process to get you on the road fast.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,1024 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* General body styling */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #011f4b;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Dodavanje senke i efekta pri skrolovanju */
+.navbar {
+    background-color: #03396c !important; /* Osigurava da Bootstrap ne prebriše boju */
+    padding: 10px 0 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga senka za početak */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Glatka promena boje i senke */
+}
+
+/* Efekat kada se skroluje */
+.navbar.scrolled {
+    background-color: #022a45 !important; /* Tamnija pozadina pri skrolovanju */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Jača senka pri skrolovanju */
+}
+
+.navbar-brand {
+    font-size: 1.5rem !important;
+    font-family: 'Lobster', cursive;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem !important;
+    padding: 8px 15px !important;
+    color: #ffffff; /* Boja linkova */
+    transition: color 0.3s ease; /* Glatka promena boje linkova */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd; /* Narandžasta boja pri hover-u */
+}
+
+
+/* Hero Section Fix */
+.hero {
+    background-image: url("images/pic2.jpeg");
+    height: 100vh; /* Hero sekcija sada zauzima celu visinu ekrana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero .hero-content {
+    z-index: 1;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem; 
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero .btn-primary {
+    background-color: #005b96;
+    border-color: #005b96;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.hero .btn-primary:hover {
+    background-color: #03396c;
+    border-color: #03396c;
+}
+
+/* 🚗 Car Rental Section */
+.car-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.car-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.car-card h4 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.car-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.car-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.car-card .btn {
+    background-color: #005b96;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.car-card .btn:hover {
+    background-color: #03396c;
+}
+
+/* 🎯 Services Section */
+.services-section {
+    padding: 50px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.service-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-box h4 {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: #03396c;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.testimonial-text {
+    color: #000000;
+}
+
+.testimonial-name{
+    color: #000000;
+    font-style: italic;
+    font-family: 10px;
+}
+
+/* Footer */
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.footer .footer-links li {
+    margin-right: 15px;
+}
+
+.footer .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-links li a:hover {
+    color: #007bff; /* Plava boja na hover */
+}
+
+/* General */
+.subscriptions {
+    background-color: #f8f9fa;
+}
+
+.title {
+    color: #000000;
+    font-size: 2rem;
+}
+
+.highlight {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Toggle Switch */
+.form-switch .form-check-input {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #76c044;
+}
+
+/* Plans */
+.plan {
+    min-height: 100%;
+    transition: all 0.3s ease;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.recommended {
+    border: 2px solid #005b96;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.faq-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #005b96; /* Zameni bojom koja ti odgovara */
+}
+
+/* FAQ List */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+/* Stil za pitanje */
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #005b96; /* Zameni bojom koja ti odgovara */
+}
+
+.icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+/* Animacija za odgovor */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* Kada je odgovor otvoren */
+.faq-answer.show {
+    opacity: 1;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact-section .highlight {
+    color: #005b96;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-label{
+    color:#000000;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.reservations{
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: #005b96;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #004080;
+}
+
+.form-message {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: green;
+}
+
+/* Poboljšan izgled modala */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    font-size: 1rem !important; /* Održava istu veličinu */
+    padding: 10px 20px !important; /* Sprječava različite margine */
+    border-radius: 5px !important; /* Osigurava isti oblik */
+}
+
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #007bff;
+}
+
+.account-link a{
+    color: #007bff;
+}
+
+.text-center a {
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+.custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Blago tamnija, ali ne previše */
+    z-index: 1040;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; /* Uklanja blic efekt */
+}
+
+.price-monthly, .price-yearly{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Stil za rezervacioni modal */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #28a745;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    margin: 15% auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #343a40;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.reservation {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.modal-content {
+    border-radius: 10px;
+}
+.modal-header {
+    background-color: #343a40;
+    color: white;
+}
+.form-label {
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+.btn-success:hover {
+    background-color: #218838;
+}
+.modal-body form input {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.modal-body form .form-label {
+    font-size: 0.9rem;
+}
+
+#cars{
+    margin-top: 40px;
+}
+
+/* Custom modal styling */
+/* Fix za overlay - sada ne blokira klikove */
+.custom-modal {
+    display: none; /* Modal je sakriven kad se stranica učita */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.custom-modal.show {
+    display: flex !important; /* Modal se otvara samo kada dobije klasu "show" */
+}
+
+/* Modal - poboljšan dizajn */
+.custom-modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    z-index: 1051;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dugme za zatvaranje */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1052;
+    color: #333;
+}
+
+/* Dugme za zatvaranje hover */
+.close-modal:hover {
+    color: red;
+}
+
+/* Popravlja Bootstrap overlay bug */
+.modal-backdrop {
+    display: flex !important;
+}
+
+/* Osigurava da modal nestane prilikom zatvaranja */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.reservation {
+    background-color: #ffffff; /* Bela pozadina sekcije */
+    color: #333; /* Tamna boja teksta */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Blaga senka */
+}
+
+.reservation h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Plavi naglasak */
+    margin-bottom: 30px;
+}
+
+.reservation .form-label {
+    color: #666; /* Svetla boja za label */
+    font-size: 1rem;
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc; /* Svetla granica */
+    background-color: #fff; /* Bela pozadina inputa */
+    color: #333; /* Tamna boja teksta u inputu */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Plava boja pri fokusu */
+    background-color: #f1f1f1; /* Svetlija pozadina pri fokusu */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Plava senka pri fokusu */
+}
+
+.form-select {
+    background-color: #fff; /* Bela pozadina za select */
+    color: #333;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #ccc; /* Svetla granica */
+}
+
+.form-select:focus {
+    border-color: #007bff; /* Plava granica pri fokusu */
+    background-color: #f1f1f1;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #007bff; /* Plava boja za dugme */
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Tamnija plava pri hoveru */
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #ffffff; /* Bela pozadina modala */
+    color: #333;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Svetla granica */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Blaga senka */
+}
+
+.modal-header {
+    background-color: #f8f9fa; /* Svetla pozadina za header modala */
+    border-bottom: 1px solid #ccc; /* Svetla granica */
+    padding: 20px;
+}
+
+.modal-title {
+    color: #007bff; /* Plava boja za naslov modala */
+    font-size: 1.8rem;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body .form-control {
+    background-color: #fff; /* Bela pozadina za inpute u modalima */
+    border: 1px solid #ccc;
+}
+
+.modal-body .form-control:focus {
+    border-color: #007bff; /* Plavi fokus pri inputu */
+    background-color: #f1f1f1;
+}
+
+.modal-footer {
+    background-color: #f8f9fa; /* Svetla pozadina za footer modala */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Modal Submit Button */
+.modal-footer .btn {
+    background-color: #007bff; /* Plava boja za dugme u modalima */
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn:hover {
+    background-color: #0056b3; /* Tamnija plava pri hoveru */
+}
+
+/* Payment Modal */
+#paymentModal .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ccc;
+}
+
+#paymentModal .form-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#paymentModal .btn-success {
+    background-color: #28a745; /* Zeleni dugme za payment */
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#paymentModal .btn-success:hover {
+    background-color: #218838; /* Tamnija zelena pri hoveru */
+}
+
+/* Adjustments for Date Inputs */
+input[type="date"] {
+    background-color: #fff; /* Bela pozadina za date inpute */
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input[type="date"]:focus {
+    background-color: #f1f1f1; /* Svetla pozadina pri fokusu */
+    border-color: #007bff; /* Plava granica pri fokusu */
+}
+
+/* Custom scrollbar for modal */
+.modal-dialog {
+    max-width: 800px;
+}
+
+/* Stil za dugme unutar modala */
+#confirmReservation {
+    background-color: #005b96;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+#confirmReservation:hover {
+    background-color: #004080;
+}
+
+/* Input polja */
+.custom-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Total price input - poboljšan izgled */
+#totalPrice {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Stilizacija switch dugmeta */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+
+/* Modal - Background */
+.modal_subscription {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal - Content Box */
+.modal_content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Form Styles */
+.modal_content label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.modal_content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-gap{
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.card_details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_details div {
+    width: 48%;
+}
+
+.pay_btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pay_btn:hover {
+    background: #45a049;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 995px) {
+    .container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero a {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+
+    .footer .footer-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .footer .footer-links li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .custom-modal-content {
+        width: 95%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer .navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .footer .footer-link {
+        font-size: 0.9rem;
+    }
+}

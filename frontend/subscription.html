@@ -1,0 +1,35 @@
+<section id="subscription" class="subscriptions text-center py-5">
+<h2 class="title">SEE OUR <span class="highlight">PRICING PLAN</span></h2>
+<!-- Pricing container -->
+<div class="container mt-5">
+  <div class="text-center mb-4 d-flex justify-content-center align-items-center gap-3">
+    <span class="fw-bold">Monthly</span>
+    <label class="switch">
+      <input type="checkbox" id="togglePlan" />
+      <span class="slider"></span>
+    </label>
+    <span class="fw-bold">Yearly</span>
+  </div>
+  <div class="row" id="pricingCards"></div>
+</div>
+
+<!-- Subscription Modal -->
+<div class="modal fade" id="subscriptionModal" tabindex="-1">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Confirm Subscription</h5>
+      <button class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">
+      <p>You're subscribing to: <strong id="modalPlanName"></strong></p>
+      <input type="text" id="CARDNUMBER" class="form-control mb-2" placeholder="Card number (16 digits)" />
+      <input type="text" id="EXPIRYDATE" class="form-control mb-2" placeholder="Expiry MM/YY" />
+      <input type="text" id="CVC" class="form-control mb-2" placeholder="CVC (3 digits)" />
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      <button class="btn btn-success" id="confirmSubscription">Confirm</button>
+    </div>
+  </div></div>
+</div>
+</section>

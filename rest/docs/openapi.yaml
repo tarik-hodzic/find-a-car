@@ -1,0 +1,305 @@
+openapi: 3.0.0
+info:
+  title: FindACar API
+  description: Full CRUD API for Users, Cars, Reservations, Subscriptions, and Contact Forms
+  version: 1.0.0
+
+servers:
+  - url: http://localhost/TarikHodzic/Introduction-To-Web-Programming/FindACar/rest
+
+paths:
+
+  /api/users:
+    get:
+      summary: Get all users
+      responses:
+        '200':
+          description: List of users
+    post:
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: User created
+
+  /api/users/{id}:
+    get:
+      summary: Get user by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: User details
+    put:
+      summary: Update user by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: User updated
+    delete:
+      summary: Delete user by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: User deleted
+
+  /api/cars:
+    get:
+      summary: Get all cars
+      responses:
+        '200':
+          description: List of cars
+    post:
+      summary: Create a new car
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Car created
+
+  /api/cars/{id}:
+    get:
+      summary: Get car by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Car details
+    put:
+      summary: Update car by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Car updated
+    delete:
+      summary: Delete car by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Car deleted
+
+  /api/subscriptions:
+    get:
+      summary: Get all subscriptions
+      responses:
+        '200':
+          description: List of subscriptions
+    post:
+      summary: Create a new subscription
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Subscription created
+
+  /api/subscriptions/{id}:
+    get:
+      summary: Get subscription by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Subscription details
+    put:
+      summary: Update subscription by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Subscription updated
+    delete:
+      summary: Delete subscription by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Subscription deleted
+
+  /api/reservations:
+    get:
+      summary: Get all reservations
+      responses:
+        '200':
+          description: List of reservations
+    post:
+      summary: Create a new reservation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Reservation created
+
+  /api/reservations/{id}:
+    get:
+      summary: Get reservation by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Reservation details
+    put:
+      summary: Update reservation by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Reservation updated
+    delete:
+      summary: Delete reservation by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Reservation deleted
+
+  /api/contact:
+    get:
+      summary: Get all contact forms
+      responses:
+        '200':
+          description: List of contact form entries
+    post:
+      summary: Create a new contact form entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Contact form created
+
+  /api/contact/{id}:
+    get:
+      summary: Get contact form by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Contact form details
+    put:
+      summary: Update contact form by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Contact form updated
+    delete:
+      summary: Delete contact form by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Contact form deleted

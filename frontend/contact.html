@@ -1,0 +1,67 @@
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="contact-title">GET IN <span class="highlight">TOUCH</span></h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">First Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Last Name</label>
+                <input type="text" id="surname" class="form-control" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" rows="4" placeholder="Write your message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p id="form-message" class="form-message"></p>
+    </div>
+</section>
+
+<script>
+  $("#contact-form").on("submit", function (e) {
+    e.preventDefault();
+
+    const name = $("#name").val().trim();
+    const surname = $("#surname").val().trim();
+    const email = $("#email").val().trim();
+    const message = $("#message").val().trim();
+
+    const token = localStorage.getItem("user_token");
+    const parsed = Utils.parseJwt(token);
+
+    if (!parsed || !parsed.user) {
+      toastr.error("You must be logged in to send a message.");
+      return;
+    }
+
+    if (!name || !surname || !email || !message) {
+      toastr.error("All fields are required.");
+      return;
+    }
+
+    const contactData = {
+      name: name,
+      surname: surname,
+      email: email,
+      message: message,
+      user_id: parsed.user.id
+    };
+
+    RestClient.post("api/contact", contactData, function () {
+      toastr.success("Message sent!");
+      $("#contact-form")[0].reset();
+    });
+  });
+</script>
