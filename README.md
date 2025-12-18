@@ -24,7 +24,7 @@ The project was developed as a full-stack application with a focus on clean arch
 This project was built to:
 
 - Develop a realistic car rental web application  
-- Practice full-stack web development concepts  
+- Strengthen full-stack web development skills
 - Implement authentication and role-based authorization  
 - Work with RESTful APIs and AJAX communication  
 - Apply clean separation between frontend, services, and data access layers  
