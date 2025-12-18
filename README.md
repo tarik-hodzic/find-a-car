@@ -1,7 +1,9 @@
 <h1>FindACar – Car Rental Platform</h1>
 
-FindACar is a web-based car rental platform that allows users to browse available vehicles, make reservations, and manage rentals through a modern and user-friendly interface.  
-The project was developed as a full-stack application with a focus on clean architecture, authentication, and real-world rental workflows.
+FindACar is a web-based car rental platform that allows users to browse available vehicles,
+make reservations, and manage rentals through a modern and user-friendly interface.  
+The project was developed as a full-stack application with a focus on clean architecture,
+authentication, and real-world rental workflows.
 
 <h2>Technologies Used</h2>
 
@@ -24,7 +26,7 @@ The project was developed as a full-stack application with a focus on clean arch
 This project was built to:
 
 - Develop a realistic car rental web application  
-- Strengthen full-stack web development skills
+- Strengthen full-stack web development skills  
 - Implement authentication and role-based authorization  
 - Work with RESTful APIs and AJAX communication  
 - Apply clean separation between frontend, services, and data access layers  
@@ -65,6 +67,14 @@ This project requires a local server environment.
 - Service layer for business logic  
 - Middleware for authentication and authorization  
 - Frontend communicates with backend using AJAX  
+
+<h2>Project Scope</h2>
+
+This project focuses on demonstrating full-stack web development concepts,
+including user authentication, role-based authorization, RESTful APIs,
+and client-server communication using AJAX.  
+It is intended for educational purposes and does not represent a
+production-ready car rental system.
 
 <h2>Author</h2>
 
